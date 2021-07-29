@@ -1,0 +1,17 @@
+spring:
+   application:
+      name: auth-service
+   cloud:
+      config:
+         server: 
+            git: 
+               uri: https://github.com/Shaiwal/olx-config
+               username: Shaiwal
+               password: Abhinov2005
+               clone-on-start: true
+#1 call GET http://localhost:8888/auth-service/default
+#2 call GET http://localhost:8888/advertise-service/default
+#3 call GET http://localhost:8888/masterdata-service/default
+# above default means root folder but env specific will replace default with dev/stage/prod
+server:
+  port: 8888
